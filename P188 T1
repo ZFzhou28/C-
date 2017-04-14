@@ -1,0 +1,38 @@
+//P188 T1  输入三个整数，按由小到大的顺序输出
+#include<iostream>
+using namespace std;
+void main()
+{
+	void jh(int *a, int *b);
+	int a[3];
+	cout << "please enter three number:";
+	int k = 0;
+	cin >> a[0] >> a[1] >> a[2];
+	int *p,*q,*l;
+	
+	for(int n=0;n<2;n++)
+	{
+		for (int j = 0; j<(2-n); j++)
+		{
+			p = &a[j]; q=&a[j + 1];
+			if (a[j] > a[j + 1])
+			{
+				jh(p,q);
+			}
+		}
+	}
+	cout << "the number;";
+	for (int r = 0; r < 3; r++)
+	{
+		cout << a[r] << "  ";
+	}
+}
+
+
+void jh(int *a, int *b)
+{
+	int k;
+	k = *a;
+	*a = *b;
+	*b = k;
+}
